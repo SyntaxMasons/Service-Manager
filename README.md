@@ -1,3 +1,7 @@
+# 🚀 Remote Service Manager
+
+A lightweight, zero-dependency Go REST API that allows you to securely manage `systemd` services, `Docker` containers, and `nerdctl` containers over HTTP. Designed with security in mind, it features built-in token-based authentication and strict configuration whitelists to ensure only authorized users can start, stop, or check the status of explicitly allowed services.
+
 ## Features
 
 * 🚀 **Ultra Lightweight:** Written in Go, meaning low memory footprint and no external dependencies (no Python, no Node modules).
