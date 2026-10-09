@@ -1,14 +1,15 @@
 {
+  "port": 8080,
   "tokens": [
-    "9aHZrl5qkoCOsYJB8DpAvrROqjKyM6dhZ2kLEgqFBJFkwfHI5IdaCo8EPxkW5Grj"
+    "secret-token-123"
   ],
-  "allowed_systemctl": [
-    "apache2"
-  ],
-  "allowed_docker": [
-    "my_container_1"
-  ],
-  "allowed_nerdctl": [
-    "my_container_2"
-  ]
+  "allowed_systemctl": ["apache2"],
+  "allowed_docker": [],
+  "allowed_nerdctl": [],
+  "workflows": {
+    "reboot_stack": [
+      { "type": "systemctl", "name": "apache2", "action": "stop" },
+      { "type": "systemctl", "name": "apache2", "action": "start" }
+    ]
+  }
 }
